@@ -1,0 +1,10 @@
+.SearchResults {
+    padding: 20px;
+  }
+  
+  .TrackList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
