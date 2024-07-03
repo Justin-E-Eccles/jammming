@@ -16,3 +16,4 @@ function SearchResults({ results }) {
 }
 
 export default SearchResults;
+

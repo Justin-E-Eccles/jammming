@@ -6,7 +6,11 @@ import './App.css';
 
 function App() {
 
-  const [searchResults, setSearchResults] = useState([]);
+  const [searchResults, setSearchResults] = useState([
+    { id: 1, name: 'Track 1', artist: 'Artist 1', album: 'Album 1' },
+    { id: 2, name: 'Track 2', artist: 'Artist 2', album: 'Album 2' },
+    { id: 3, name: 'Track 3', artist: 'Artist 3', album: 'Album 3' }
+  ]);
   const [playlistTracks, setPlaylistTracks] = useState([]);
   const [playlistName, setPlaylistName] = useState('New Playlist');
 
@@ -46,6 +50,7 @@ function App() {
       <SearchResults results={searchResults} />
       <Playlist 
           playlistTracks={playlistTracks} 
+          playlistName={playlistName}
           onRemove={removeTrack} 
           onNameChange={updatePlaylistName} 
           onSave={savePlaylist} 

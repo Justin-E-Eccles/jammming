@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './playlist.module.css';
 import TrackList from '../Tracklist/TrackList';
 
-function Playlist({ playlistTracks, onRemove, onNameChange, onSave }) {
+function Playlist({ playlistTracks, playlistName, onRemove, onNameChange, onSave }) {
   const handleNameChange = (e) => {
     onNameChange(e.target.value);
   };
@@ -10,7 +10,7 @@ function Playlist({ playlistTracks, onRemove, onNameChange, onSave }) {
   return (
     <div className={styles.Playlist}>
       <input 
-        defaultValue={"New Playlist"} 
+        value={playlistName} 
         onChange={handleNameChange} 
       />
       <TrackList 
